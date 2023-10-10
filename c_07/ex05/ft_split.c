@@ -6,43 +6,37 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:08:21 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/10 17:50:16 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/10 18:21:43 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-/*
-int	check_separator(char *str, char *charset)
+int	is_sep(char a, char *charset)
 {
 	int	i;
 
 	i = -1;
 	while (charset[++i])
-		if (charset[i] == *str)
+		if (charset[i] == a)
 			return (1);
 	return (0);
 }
-*/
 
-int check_separator(char *str, char *charset) {
-    int i;
+int	check_sep(char *str, char *charset)
+{
+	char	*start;
 
-    while (*charset) {
-        i = 0;
-        while (charset[i] == str[i] && charset[i] != '\0') {
-            i++;
-        }
-        if (charset[i] == '\0') {
-            return 1; // Found a separator
-        }
-        charset++;
-    }
-
-    return 0; // Not a separator
+	start = str;
+	while (is_sep(*str, charset))
+	{
+		if (!(*str))
+			return (1);
+		str++;
+	}
+	return (str - start);
 }
-
 
 int	count_words(char *str, char *charset)
 {
@@ -52,12 +46,7 @@ int	count_words(char *str, char *charset)
 
 	i = -1;
 	word_count = 0;
-	while (*str)
-	{
-		if (*str == *charset && check_separator(str, charset))
-			word_count++;
-		str++;
-	}
+	
 	return (word_count + 1);
 }
 
@@ -107,6 +96,7 @@ char	**ft_split(char *str, char *charset)
 	char	**split;
 	char	*start;
 	int		string_index;
+	char *temp_str;
 
 	if (check_errors(str, charset, &split, &string_index) != 2)
 		return (split);
@@ -115,12 +105,11 @@ char	**ft_split(char *str, char *charset)
 	{
 		if (!start)
 			start = str;
-		if (check_separator(str, charset))
-		{
-			if (str - start)
-				split[string_index++] = create_word(start, str);
-			start = 0;
-		}
+		temp_str = str;
+		str += check_separator(str, charset);
+		if (temp_str - str)
+				split[string_index++] = create_word(start, temp_str);
+			start = 0;		
 		else if (!(*(str + 1)))
 			split[string_index++] = create_word(start, str + 1);
 		str++;
