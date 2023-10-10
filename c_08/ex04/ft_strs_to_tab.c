@@ -6,11 +6,12 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 01:32:31 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/10 19:46:19 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:42:46 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stock_str.h"
+#include <stdlib.h>
 
 int	get_str_len(char *str)
 {
