@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:08:21 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/09 23:11:52 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/10 15:35:53 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	check_separator(char *str, char *charset)
 	int	i;
 
 	i = -1;
-	while (charset[i++])
+	while (charset[++i])
 		if (charset[i] == *str)
 			return (1);
 	return (0);
@@ -29,21 +29,15 @@ int	count_words(char *str, char *charset)
 	int		word_count;
 	int		i;
 	int		sep_len;
-	char	*temp;
 
 	i = -1;
 	word_count = 0;
-	temp = str;
-	while (charset[++i])
-		;
-	sep_len = i;
 	while (*str)
 	{
 		if (*str == *charset && check_separator(str, charset))
 			word_count++;
 		str++;
 	}
-	str = temp;
 	return (word_count + 1);
 }
 
