@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 01:32:31 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/10 20:42:46 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:44:48 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,6 @@ struct s_stock_str	create_struct(char *str)
 	return (s_struct);
 }
 
-void	add_last_struct(struct s_stock_str *arr, int i)
-{
-	struct s_stock_str	last;
-
-	last.size = 0;
-	last.str = 0;
-	last.copy = 0;
-	arr[i] = last;
-}
-
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	int					i;
@@ -79,6 +69,6 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 		ret_strs[i] = create_struct(av[i]);
 		i++;
 	}
-	add_last_struct(ret_strs, i);
+	ret_strs[--i].str = 0;
 	return (ret_strs);
 }
