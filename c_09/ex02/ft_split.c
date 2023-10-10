@@ -102,12 +102,10 @@ char	**ft_split(char *str, char *charset)
 	start = 0;
 	while (*(++str))
 	{
-		if (!start)
-			start = str;
 		jumped = str;
 		while (is_sep(str, charset))
 			str++;
-		if ((jumped - str || !(*(str + 1))))
+		if (start && (jumped - str || !(*(str + 1))))
 		{
 			if (is_sep(str, charset) && (!(*str) || !(*(str + 1))))
 				break ;
@@ -116,6 +114,8 @@ char	**ft_split(char *str, char *charset)
 				break ;
 			start = str;
 		}
+		if (!start)
+			start = str;
 	}
 	return (split);
 }
