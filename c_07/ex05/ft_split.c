@@ -6,13 +6,14 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:08:21 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/10 15:35:53 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/10 17:50:16 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
+/*
 int	check_separator(char *str, char *charset)
 {
 	int	i;
@@ -23,6 +24,25 @@ int	check_separator(char *str, char *charset)
 			return (1);
 	return (0);
 }
+*/
+
+int check_separator(char *str, char *charset) {
+    int i;
+
+    while (*charset) {
+        i = 0;
+        while (charset[i] == str[i] && charset[i] != '\0') {
+            i++;
+        }
+        if (charset[i] == '\0') {
+            return 1; // Found a separator
+        }
+        charset++;
+    }
+
+    return 0; // Not a separator
+}
+
 
 int	count_words(char *str, char *charset)
 {
@@ -57,10 +77,29 @@ char	*create_word(char *start, char *str)
 	return (ret);
 }
 
-void	allocate_split_init_var(int *string_index, char **start)
+int	check_errors(char *str, char *charset, char ***split, int *string_index)
 {
+	int	str_len;
+
+	str_len = -1;
+	if (str == NULL)
+	{
+		*split = (char **)malloc(1 * 8);
+		(*split)[0] = 0;
+		return (0);
+	}
+	else if (charset == NULL)
+	{
+		while (str[++str_len])
+			;
+		*split = (char **)malloc(2 * 8);
+		(*split)[0] = create_word(str, str + str_len - 1);
+		(*split)[1] = 0;
+		return (1);
+	}
 	*string_index = 0;
-	*start = 0;
+	*split = (char **)malloc((count_words(str, charset) + 1) * 8);
+	return (2);
 }
 
 char	**ft_split(char *str, char *charset)
@@ -69,10 +108,9 @@ char	**ft_split(char *str, char *charset)
 	char	*start;
 	int		string_index;
 
-	if (str == NULL || charset == NULL)
-		return (0);
-	split = (char **)malloc((count_words(str, charset) + 1) * 8);
-	allocate_split_init_var(&string_index, &start);
+	if (check_errors(str, charset, &split, &string_index) != 2)
+		return (split);
+	start = 0;	
 	while (*str)
 	{
 		if (!start)
@@ -87,6 +125,7 @@ char	**ft_split(char *str, char *charset)
 			split[string_index++] = create_word(start, str + 1);
 		str++;
 	}
+
 	split[string_index] = 0;
 	return (split);
 }

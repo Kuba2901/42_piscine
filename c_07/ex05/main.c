@@ -17,7 +17,7 @@ int main() {
     char *charset3 = ",";
     
     // Test 4: NULL string and NULL separator
-    char *str4 = NULL;
+    char *str4 = "hello";
     char *charset4 = NULL;
     
     // Test 5: Splitting with a hyphen separator
@@ -71,7 +71,7 @@ int main() {
     char *charset16 = ":";
     
     // Test 17: Leading and trailing separators
-    char *str17 = ",,Word1,Word2,,";
+    char *str17 = ",,Word1,,Word2,,";
     char *charset17 = ",";
     
     // Test 18: Mixed separators and spaces
@@ -96,15 +96,11 @@ int main() {
         char **result = ft_split(tests[i], charsets[i]);
         
         printf("Test %d: Split result:\n", i + 1);
-        if (result == NULL) {
-            printf("   Returned NULL (Expected result for empty or NULL input).\n");
-        } else {
-            for (int j = 0; result[j] != NULL; j++) {
-                printf("   Word %d: %s\n", j + 1, result[j]);
-                free(result[j]);
-            }
-            free(result);
+        for (int j = 0; result[j] != NULL; j++) {
+        	printf("   Word %d: %s\n", j + 1, result[j]);
+            free(result[j]);
         }
+        free(result);
         printf("\n");
     }
     
