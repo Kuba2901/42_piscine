@@ -1,0 +1,223 @@
+Script started on Mon Oct  9 23:14:06 2023
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004h[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd ..[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+c_00	c_01	c_02	c_03	c_04	c_05	c_06	c_07	c_08	c_09	rush00	rush01	rush02	scripts	shell00	shell01
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd scripts[1m/[0m[0m [?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls -la[?2004l
+total 16
+drwxr-xr-x   4 jnenczak  2023_rome  136 Sep 21 15:17 .
+drwxr-xr-x  21 jnenczak  2023_rome  714 Oct  9 23:02 ..
+-rwxr-----   1 jnenczak  2023_rome   50 Sep 20 21:41 push_changes.sh
+-rwxr-----   1 jnenczak  2023_rome  194 Sep 21 15:17 test.sh
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd ..[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+c_00	c_01	c_02	c_03	c_04	c_05	c_06	c_07	c_08	c_09	rush00	rush01	rush02	scripts	shell00	shell01
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd shell01 0[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+ex00	ex01	ex02	ex03	ex04	ex05	ex06	ex07	ex08	ex09
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004h- s lls -la[?2004l
+total 8
+drwxr-xr-x  14 jnenczak  2023_rome  476 Sep 19 15:02 .
+drwxr-xr-x  21 jnenczak  2023_rome  714 Oct  9 23:02 ..
+drwxr-xr-x  13 jnenczak  2023_rome  442 Sep 19 16:00 .git
+-rw-r--r--   1 jnenczak  2023_rome   10 Sep 19 15:02 .gitignore
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:02 ex00
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:48 ex01
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:48 ex02
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:02 ex03
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:02 ex04
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:02 ex05
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:02 ex06
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:59 ex07
+drwxr-xr-x   4 jnenczak  2023_rome  136 Sep 20 18:52 ex08
+drwxr-xr-x   3 jnenczak  2023_rome  102 Sep 19 15:02 ex09
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hrrm -rf .git[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd ..[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+c_00	c_01	c_02	c_03	c_04	c_05	c_06	c_07	c_08	c_09	rush00	rush01	rush02	scripts	shell00	shell01
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd shell01[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+ex01	ex02	ex03	ex04	ex05	ex06	ex07	ex08
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls -la[?2004l
+total 16
+drwxr-xr-x  12 jnenczak  2023_rome   408 Sep 19 12:31 .
+drwxr-xr-x  21 jnenczak  2023_rome   714 Oct  9 23:02 ..
+-rw-r--r--@  1 jnenczak  2023_rome  6148 Sep 19 19:54 .DS_Store
+drwxr-xr-x  12 jnenczak  2023_rome   408 Sep 19 17:48 .git
+drwxr-xr-x   3 jnenczak  2023_rome   102 Sep 23 20:43 ex01
+drwxr-xr-x   3 jnenczak  2023_rome   102 Sep 19 19:54 ex02
+drwxr-xr-x   7 jnenczak  2023_rome   238 Sep 23 20:54 ex03
+drwxr-xr-x   3 jnenczak  2023_rome   102 Sep 18 17:32 ex04
+drwxr-xr-x   3 jnenczak  2023_rome   102 Sep 19 22:04 ex05
+drwxr-xr-x   3 jnenczak  2023_rome   102 Sep 19 17:35 ex06
+drwxr-xr-x   3 jnenczak  2023_rome   102 Sep 18 19:55 ex07
+drwxr-xr-x   3 jnenczak  2023_rome   102 Sep 19 12:36 ex08
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hrrm 0rf   -rf .git[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004h. rrm .DS_Store[1m [0m[0m [?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd ..[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hggit add -A[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hggit commit -m ""R"e"p"u"s"h"i"n"g" "a"" e"v"e"r"t"y"" " y"t"h"i"n"g"[?2004l
+[main 809d950] Repushing everything
+ Committer: Jakub Nenczak <jnenczak@e3r8p8.42roma.it>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 8 files changed, 57 insertions(+), 6 deletions(-)
+ delete mode 100644 c_00/.DS_Store
+ delete mode 160000 eva
+ delete mode 100644 rush00/.gitignore
+ create mode 100644 rush01/typescript
+ delete mode 100644 shell01/.DS_Store
+ delete mode 160000 temp
+ delete mode 160000 temp_rush02
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hggtg git push[?2004l
+Enumerating objects: 14, done.
+Counting objects:   7% (1/14)   Counting objects:  14% (2/14)   Counting objects:  21% (3/14)   Counting objects:  28% (4/14)   Counting objects:  35% (5/14)   Counting objects:  42% (6/14)   Counting objects:  50% (7/14)   Counting objects:  57% (8/14)   Counting objects:  64% (9/14)   Counting objects:  71% (10/14)   Counting objects:  78% (11/14)   Counting objects:  85% (12/14)   Counting objects:  92% (13/14)   Counting objects: 100% (14/14)   Counting objects: 100% (14/14), done.
+Delta compression using up to 6 threads
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 1.38 KiB | 1.38 MiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+To github.com:Kuba2901/piscine.git
+   06bfdb9..809d950  main -> main
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+c_00	c_01	c_02	c_03	c_04	c_05	c_06	c_07	c_08	c_09	rush00	rush01	rush02	scripts	shell00	shell01
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd ..  c cls -l   c  lls -la[?2004l
+total 32
+drwxr-xr-x  21 jnenczak  2023_rome   714 Oct  9 23:02 .
+drwxr-xr-x  26 jnenczak  2023_rome   952 Oct  9 23:11 ..
+-rw-r--r--@  1 jnenczak  2023_rome  8196 Oct  9 13:50 .DS_Store
+drwxr-xr-x  13 jnenczak  2023_rome   442 Oct  9 23:14 .git
+-rw-r--r--   1 jnenczak  2023_rome     7 Oct  8 17:14 .gitignore
+drwxr-xr-x  12 jnenczak  2023_rome   408 Oct  9 23:12 c_00
+drwxr-xr-x  11 jnenczak  2023_rome   374 Oct  9 23:12 c_01
+drwxr-xr-x  15 jnenczak  2023_rome   510 Sep 26 12:45 c_02
+drwxr-xr-x   8 jnenczak  2023_rome   272 Oct  9 23:12 c_03
+drwxr-xr-x   8 jnenczak  2023_rome   272 Sep 28 16:24 c_04
+drwxr-xr-x  11 jnenczak  2023_rome   374 Oct  9 23:13 c_05
+drwxr-xr-x   6 jnenczak  2023_rome   204 Oct  9 23:13 c_06
+drwxr-xr-x   8 jnenczak  2023_rome   272 Oct  9 23:02 c_07
+drwxr-xr-x   8 jnenczak  2023_rome   272 Oct  9 23:13 c_08
+drwxr-xr-x   4 jnenczak  2023_rome   136 Oct  5 20:17 c_09
+drwxr-xr-x   3 jnenczak  2023_rome   102 Oct  9 23:13 rush00
+drwxr-xr-x   4 jnenczak  2023_rome   136 Oct  9 23:14 rush01
+drwxr-xr-x   7 jnenczak  2023_rome   238 Oct  8 05:12 rush02
+drwxr-xr-x   4 jnenczak  2023_rome   136 Sep 21 15:17 scripts
+drwxr-xr-x  13 jnenczak  2023_rome   442 Oct  9 23:14 shell00
+drwxr-xr-x  10 jnenczak  2023_rome   340 Oct  9 23:14 shell01
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hrrm -rf .git
+[J.git/       .gitignore[A[0m[27m[24m[8Crm -rf .git[K .git
+[J[J.git/       .gitignore[A[0m[27m[24m[8Crm -rf .git .git[Kignore[1m [0m[0m .DS_Store[1m [0m[0m [?2004l
+[J[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd ..[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+Desktop		Documents	Downloads	Library		Music		goinfre		mini-moulinette	piscine
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hggit clone [7mgit@github.com:Kuba2901/42_piscine.git[27m[38D[27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m:[27mK[27mu[27mb[27ma[27m2[27m9[27m0[27m1[27m/[27m4[27m2[27m_[27mp[27mi[27ms[27mc[27mi[27mn[27me[27m.[27mg[27mi[27mt 42_   piscine[?2004l
+fatal: destination path 'piscine' already exists and is not an empty directory.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hgit clone git@github.com:Kuba2901/42_piscine.git piscine2piscinepiscine [8D4piscine2piscine_piscine[?2004l
+Cloning into '42_piscine'...
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccat ~/.ssh[1m/[0m[0m/
+[Jid_rsa       id_rsa.pub   known_hosts[A[0m[27m[24m[8Ccat ~/.ssh/[Kid
+[J[A[21C_rsa_ .pub[1m [0m[0m [?2004l
+[Jssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7cAeQ6PkWnxToUCus7EAgtPtpJIqSai3iNR/h/zU5eHxvNORjx1CwhBtE0kVndjrbPx0LMaB024N3ybjnDmXHHaI9c879x4emGFWCkBMUJciT9cU5AnM1EdkhWNLT7oSH8xlKKM4rL8Fu6imQqzCMdFfipTmvpYecbnm1B+B9SofsarU6mYQj8zSNs7a64YystL8t/EwAPp/PAqW4gTigpfGQWQoK0K0lSLNuG/LSSmDhK5vAW6yyGoKCDIF9NG2fABefBmoQ2EQ1JDhwaV4Ztl2nK0mfMSi5Hhupkl2ZNtfHzXyugF5D8mh/wXcYs8oL0vmztPHp4Z3ibCl1MjeN jnenczak@e3r6p5.42roma.it
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+Desktop		Documents	Downloads	Library		Music		goinfre		mini-moulinette	piscine
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hggit clone [7mgit@github.com:Kuba2901/42_piscine.git[27m[38D[27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m:[27mK[27mu[27mb[27ma[27m2[27m9[27m0[27m1[27m/[27m4[27m2[27m_[27mp[27mi[27ms[27mc[27mi[27mn[27me[27m.[27mg[27mi[27mt 42_piscine[?2004l
+Cloning into '42_piscine'...
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+Desktop		Documents	Downloads	Library		Music		goinfre		mini-moulinette	piscine
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd c  mmkdir 42_piscine[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd 
+[J42_piscine/       Desktop/          Documents/        Downloads/        Library/          Music/            goinfre@          mini-moulinette/  piscine/[A[0m[27m[24m[8Ccd[K[1C42_piscine[1m/[0m[0m [?2004l
+[J[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004h[7mecho "# 42_piscine" >> README.md[27m
+[7mgit init[27m[K
+[7mgit add README.md[27m[K
+[7mgit commit -m "first commit"[27m[K
+[7mgit branch -M main[27m[K
+[7mgit remote add origin git@github.com:Kuba2901/42_piscine.git[27m[K
+[7mgit push -u origin main[27m[K[6A[15D[27me[27mc[27mh[27mo[27m [27m"[27m#[27m [27m4[27m2[27m_[27mp[27mi[27ms[27mc[27mi[27mn[27me[27m"[27m [27m>[27m>[27m [27mR[27mE[27mA[27mD[27mM[27mE[27m.[27mm[27md[1B[27mg[27mi[27mt[27m [27mi[27mn[27mi[27mt[1B[27mg[27mi[27mt[27m [27ma[27md[27md[27m [27mR[27mE[27mA[27mD[27mM[27mE[27m.[27mm[27md[1B[27mg[27mi[27mt[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m [27m-[27mm[27m [27m"[27mf[27mi[27mr[27ms[27mt[27m [27mc[27mo[27mm[27mm[27mi[27mt[27m"[1B[27mg[27mi[27mt[27m [27mb[27mr[27ma[27mn[27mc[27mh[27m [27m-[27mM[27m [27mm[27ma[27mi[27mn[1B[27mg[27mi[27mt[27m [27mr[27me[27mm[27mo[27mt[27me[27m [27ma[27md[27md[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m:[27mK[27mu[27mb[27ma[27m2[27m9[27m0[27m1[27m/[27m4[27m2[27m_[27mp[27mi[27ms[27mc[27mi[27mn[27me[27m.[27mg[27mi[27mt[1B[27mg[27mi[27mt[27m [27mp[27mu[27ms[27mh[27m [27m-[27mu[27m [27mo[27mr[27mi[27mg[27mi[27mn[27m [27mm[27ma[27mi[27mn[?2004l
+Initialized empty Git repository in /Users/jnenczak/42_piscine/.git/
+[master (root-commit) b4abd3b] first commit
+ Committer: Jakub Nenczak <jnenczak@e3r8p8.42roma.it>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls -la[?2004l
+total 8
+drwxr-xr-x   4 jnenczak  2023_rome  136 Oct  9 23:18 .
+drwxr-xr-x  27 jnenczak  2023_rome  986 Oct  9 23:17 ..
+drwxr-xr-x  12 jnenczak  2023_rome  408 Oct  9 23:18 .git
+-rw-r--r--   1 jnenczak  2023_rome   13 Oct  9 23:18 README.md
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hrrm -rf .git README.md[1m [0m[0m [?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccd ..[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hl lls[?2004l
+42_piscine	Desktop		Documents	Downloads	Library		Music		goinfre		mini-moulinette	piscine
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hrrm -rf 42_piscine[1m/[0m[0m [?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hggit clone [7mgit@github.com:Kuba2901/42_piscine.git[27m[38D[27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m:[27mK[27mu[27mb[27ma[27m2[27m9[27m0[27m1[27m/[27m4[27m2[27m_[27mp[27mi[27ms[27mc[27mi[27mn[27me[27m.[27mg[27mi[27mt[?2004l
+Cloning into '42_piscine'...
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hlls[?2004l
+Desktop		Documents	Downloads	Library		Music		goinfre		mini-moulinette	piscine
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hggit clone [7mgit@github.com:Kuba2901/42_piscine.git[27m[38D[27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[27m:[27mK[27mu[27mb[27ma[27m2[27m9[27m0[27m1[27m/[27m4[27m2[27m_[27mp[27mi[27ms[27mc[27mi[27mn[27me[27m.[27mg[27mi[27mt[?2004l
+Cloning into '42_piscine'...
+ERROR: Repository not found.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hccat ~/.ssh[1m/[0m[0m/
+[Jid_rsa       id_rsa.pub   known_hosts[A[0m[27m[24m[8Ccat ~/.ssh/[Kid_rsa.pub[?2004l
+[Jssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7cAeQ6PkWnxToUCus7EAgtPtpJIqSai3iNR/h/zU5eHxvNORjx1CwhBtE0kVndjrbPx0LMaB024N3ybjnDmXHHaI9c879x4emGFWCkBMUJciT9cU5AnM1EdkhWNLT7oSH8xlKKM4rL8Fu6imQqzCMdFfipTmvpYecbnm1B+B9SofsarU6mYQj8zSNs7a64YystL8t/EwAPp/PAqW4gTigpfGQWQoK0K0lSLNuG/LSSmDhK5vAW6yyGoKCDIF9NG2fABefBmoQ2EQ1JDhwaV4Ztl2nK0mfMSi5Hhupkl2ZNtfHzXyugF5D8mh/wXcYs8oL0vmztPHp4Z3ibCl1MjeN jnenczak@e3r6p5.42roma.it
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004h[7mssh -T -ai ~/.ssh/KEY_NAME git@github.com[27m[41D[27ms[27ms[27mh[27m [27m-[27mT[27m [27m-[27ma[27mi[27m [27m~[27m/[27m.[27ms[27ms[27mh[27m/[27mK[27mE[27mY[27m_[27mN[27mA[27mM[27mE[27m [27mg[27mi[27mt[27m@[27mg[27mi[27mt[27mh[27mu[27mb[27m.[27mc[27mo[27mm[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16Dk git@github.com[15Du git@github.com[15Db git@github.com[15Da git@github.com[15D2 git@github.com[15D9 git@github.com[15D0 git@github.com[15D1 git@github.com[15D_ git@github.com[15Dg git@github.com[15Di git@github.com[15Dt git@github.com[15D[?2004l
+Warning: Identity file /Users/jnenczak/.ssh/kuba2901_git not accessible: No such file or directory.
+Hi Kuba2901/piscine! You've successfully authenticated, but GitHub does not provide shell access.
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004hssh -T -ai ~/.ssh/kuba2901_git git@github.com[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16D[P[15C [16Di git@github.com[15Dd git@github.com[15D_ git@github.com[15Dr git@github.com[15Da git@github.com[15D[P[15C [16Ds git@github.com[15Da git@github.com[15D_ git@github.com[15D[P[15C [16D. git@github.com[15Dp git@github.com[15Du git@github.com[15Db git@github.com[15D[?2004l
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '/Users/jnenczak/.ssh/id_rsa.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "/Users/jnenczak/.ssh/id_rsa.pub": bad permissions
+git@github.com: Permission denied (publickey).
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                               [0m[27m[24m[Je3r8p8% [K[?2004h
