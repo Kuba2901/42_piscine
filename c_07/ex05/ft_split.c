@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 19:08:21 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/10 18:21:43 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/10 18:59:48 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	check_sep(char *str, char *charset)
 	while (is_sep(*str, charset))
 	{
 		if (!(*str))
-			return (1);
+			break ;
 		str++;
 	}
 	return (str - start);
@@ -46,7 +46,9 @@ int	count_words(char *str, char *charset)
 
 	i = -1;
 	word_count = 0;
-	
+	while (*str)
+		if (check_sep(str++, charset))
+			word_count++;			
 	return (word_count + 1);
 }
 
@@ -96,7 +98,7 @@ char	**ft_split(char *str, char *charset)
 	char	**split;
 	char	*start;
 	int		string_index;
-	char *temp_str;
+	char	*temp_str;
 
 	if (check_errors(str, charset, &split, &string_index) != 2)
 		return (split);
@@ -106,15 +108,16 @@ char	**ft_split(char *str, char *charset)
 		if (!start)
 			start = str;
 		temp_str = str;
-		str += check_separator(str, charset);
-		if (temp_str - str)
-				split[string_index++] = create_word(start, temp_str);
-			start = 0;		
-		else if (!(*(str + 1)))
-			split[string_index++] = create_word(start, str + 1);
-		str++;
+		str += check_sep(str, charset);
+		if (str - temp_str)
+		{
+			printf("diff: %d, start: %s, str: %s\n", temp_str - start, temp_str, str);
+			split[string_index++] = create_word(start, temp_str);
+			start = 0;
+		}
+		else
+			str++;
 	}
-
 	split[string_index] = 0;
 	return (split);
 }
