@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
+
 int	ft_str_cmp(char *s1, char *s2)
 {
 	int	i;
@@ -68,7 +71,7 @@ void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 	int		j;
 	int		tab_len;
 
-	if (!tab)
+    if (!tab)
 		return ;
 	i = 0;
 	j = 0;
@@ -86,4 +89,45 @@ void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 		}
 		i++;
 	}
+}
+
+int main() {
+    char *strings[] = {"apple", "banana", "grape", "cherry"};
+
+    // Test 1: Sort in ascending order (default alphabetical order)
+    ft_advanced_sort_string_tab(strings, ft_str_cmp);
+    for (int i = 0; strings[i]; i++) {
+        printf("%s ", strings[i]);
+    }
+    printf("\n");
+
+    // Test 2: Sort in descending order
+    ft_advanced_sort_string_tab(strings, ft_str_cmp);
+    for (int i = 0; strings[i]; i++) {
+        printf("%s ", strings[i]);
+    }
+    printf("\n");
+
+    // Test 3: Sort in ascending order (case-insensitive)
+    ft_advanced_sort_string_tab(strings, ft_str_cmp);
+    for (int i = 0; strings[i]; i++) {
+        printf("%s ", strings[i]);
+    }
+    printf("\n");
+
+    // Test 4: Sort in descending order (custom comparison)
+    ft_advanced_sort_string_tab(strings, ft_str_cmp);
+    for (int i = 0; strings[i]; i++) {
+        printf("%s ", strings[i]);
+    }
+    printf("\n");
+
+    // Test 5: Sort with a custom comparison function
+    ft_advanced_sort_string_tab(strings, ft_str_cmp);
+    for (int i = 0; strings[i]; i++) {
+        printf("%s ", strings[i]);
+    }
+    printf("\n");
+
+    return 0;
 }
