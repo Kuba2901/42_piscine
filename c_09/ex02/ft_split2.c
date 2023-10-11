@@ -66,20 +66,22 @@ int	handle_errors(char *str, char *charset, char ***split, int *string_index)
 	return (2);
 }
 
-char	*create_word(char *str, char *charset)
+char	*create_word(char *start, char *end, char *charset)
 {
 	char	*created;
 	int		i;
-	int		word_len;
+	int		str_len;
 
-	word_len = -1;
+	str_len = -1;
 	i = 0;
-	while (str[++word_len] && !is_sep(str + i, charset))
-		;
-	i = -1;
-	created = (char *)malloc(word_len + 1);
-	while (++i < word_len)
-		created[i] = str++;
+	// if (is_sep(start - 1, charset) && !(*(start + 1)))
+	// 	start--;
+	created = (char *)malloc(end - start + 2);
+	while (start != end)
+	{
+		created[i++] = *start;
+		start++;
+	}
 	created[i] = '\0';
 	return (created);
 }
@@ -93,26 +95,35 @@ char	**ft_split(char *str, char *charset)
 
 	if (handle_errors(str--, charset, &split, &string_index) != 2)
 		return (split);
-	
+	start = 0;
 	while (*(++str))
 	{
-		while (*str && is_sep(str, charset))
+		jumped = str;
+		while (is_sep(str, charset))
 			str++;
-		if (*str)
+		printf("creating a word: %s\n", start);
+		if (start && ((jumped - str) || !(*(str + 1))))
 		{
-			split[string_index++] = create_word(str, charset);
+			if (is_sep(str, charset) && (!(*str) || !(*(str + 1))))
+				break ;
+			split[string_index++] = create_word(start, jumped, charset);
+			if (!is_sep(str, charset) && (!(*str) || !(*(str + 1))))
+				break ;
+			start = str;
 		}
+		if (!start)
+			start = str;
 	}
 	return (split);
-}	
+}
 
 int	main(int ac, char **av)
 {
 	int		i;
 	char	**split;
 
-	// split = ft_split("hello", " ");
-	split = ft_split(av[1], av[2]);
+	split = ft_split("hello worl d", " ");
+	// split = ft_split(av[1], av[2]);
 	i = -1;
 	while (split[++i])
 		printf("%s\n", split[i]);
