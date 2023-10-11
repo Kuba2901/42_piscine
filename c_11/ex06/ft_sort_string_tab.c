@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 22:32:19 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 22:32:27 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 23:33:04 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,13 @@ void	ft_sort_string_tab(char **tab)
 	char	*temp;
 	int		tab_len;
 
-	i = 0;
-	j = 0;
+	if (!tab)
+		return ;
+	i = -1;
 	tab_len = -1;
 	while (tab[++tab_len])
 		;
-	while (i < tab_len)
+	while (++i < tab_len)
 	{
 		j = 0;
 		while (j < tab_len - 1)
@@ -51,6 +52,5 @@ void	ft_sort_string_tab(char **tab)
 			}
 			j++;
 		}
-		i++;
 	}
 }
