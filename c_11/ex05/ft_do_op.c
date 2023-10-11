@@ -64,27 +64,32 @@ void	handle_safe(int val1, char *op,
 		ft_putnbr(operation[2](val1, val2));
 }
 
+int	safe(char *op)
+{
+	return ((!ft_strcmp(op, "+") || !ft_strcmp(op, "-") || !ft_strcmp(op, "*")));
+}
+
 void	ft_do_op(int val1, char *op, int val2)
 {
 	int	(*operation[5])(int, int);
 
 	assign_operations(operation);
-	if (!ft_strcmp(op, "+") || !ft_strcmp(op, "-") || !ft_strcmp(op, "*"))
+	if (op && safe(op))
 		handle_safe(val1, op, val2, operation);
-	else if (!ft_strcmp(op, "/"))
+	else if (op && !ft_strcmp(op, "/"))
 	{
 		if (!val2)
 		{
-			ft_putstr("Stop: division by zero\n");
+			ft_putstr("Stop: division by zero");
 			return ;
 		}
 		ft_putnbr(operation[3](val1, val2));
 	}
-	else if (!ft_strcmp(op, "%"))
+	else if (op && !ft_strcmp(op, "%"))
 	{
 		if (!val2)
 		{
-			ft_putstr("Stop: modulo by zero\n");
+			ft_putstr("Stop: modulo by zero");
 			return ;
 		}
 		ft_putnbr(operation[4](val1, val2));
