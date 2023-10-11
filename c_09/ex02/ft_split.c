@@ -70,16 +70,18 @@ char	*create_word(char *str, char *charset)
 {
 	char	*created;
 	int		i;
-	int		word_len;
+	int	word_len;
 
-	word_len = -1;
-	i = 0;
-	while (str[++word_len] && !is_sep(str + i, charset))
-		;
+	word_len = 0;
+	while (*(str + word_len) && !is_sep(str + word_len, charset))
+		word_len++;
 	i = -1;
 	created = (char *)malloc(word_len + 1);
 	while (++i < word_len)
-		created[i] = str++;
+	{
+		created[i] = *str;
+		str++;
+	}
 	created[i] = '\0';
 	return (created);
 }
@@ -91,18 +93,18 @@ char	**ft_split(char *str, char *charset)
 	char	*jumped;
 	int		string_index;
 
-	if (handle_errors(str--, charset, &split, &string_index) != 2)
+	if (handle_errors(str, charset, &split, &string_index) != 2)
 		return (split);
-	
-	while (*(++str))
+	while (*(str))
 	{
 		while (*str && is_sep(str, charset))
 			str++;
 		if (*str)
-		{
 			split[string_index++] = create_word(str, charset);
-		}
+		while (*str && !is_sep(str, charset))
+			str++;
 	}
+	split[string_index] = 0;
 	return (split);
 }	
 
