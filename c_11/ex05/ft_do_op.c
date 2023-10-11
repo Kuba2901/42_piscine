@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:30:58 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 22:44:54 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 22:55:44 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,31 +18,7 @@ int		modulo(int val1, int val2);
 int		ft_strcmp(char *s1, char *s2);
 void	ft_putstr(char *str);
 void	ft_putnbr(int nb);
-
-int	ft_atoi(char *str)
-{
-	int	num;
-	int	minus_count;
-
-	num = 0;
-	minus_count = 0;
-	while (*str < '0' || *str > '9')
-	{
-		if (*str != '-' && *str != ' ' && *str != '+')
-			return (0);
-		if (*str == '-')
-			minus_count++;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		num = num * 10 + *str - '0';
-		str++;
-	}
-	if (minus_count % 2 != 0)
-		return (-num);
-	return (num);
-}
+int		ft_atoi(char *str);
 
 void	assign_operations(int (*operation[5])(int, int))
 {
@@ -66,7 +42,8 @@ void	handle_safe(int val1, char *op,
 
 int	safe(char *op)
 {
-	return ((!ft_strcmp(op, "+") || !ft_strcmp(op, "-") || !ft_strcmp(op, "*")));
+	return ((!ft_strcmp(op, "+") || !ft_strcmp(op, "-") \
+				|| !ft_strcmp(op, "*")));
 }
 
 void	ft_do_op(int val1, char *op, int val2)
