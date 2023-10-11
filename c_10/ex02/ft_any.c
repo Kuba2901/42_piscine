@@ -6,11 +6,17 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:35:02 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 17:39:36 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:51:55 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_any(char **tab, int(*f)(char *))
+int	ft_any(char **tab, int (*f)(char *))
 {
+	int	i;
 
+	i = -1;
+	while (tab[++i])
+		if (f(tab[i]))
+			return (1);
+	return (0);
 }
