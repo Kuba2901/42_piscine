@@ -6,12 +6,31 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:30:58 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 21:44:29 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 21:49:12 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+
+int	add(int val1, int val2);
+int	subtract(int val1, int val2);
+int	divide(int val1, int val2);
+int	multiply(int val1, int val2);
+int	modulo(int val1, int val2);
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if (s1[i] != s2[i])
+			break ;
+		i++;
+	}
+	return (s1[i] - s2[i]);
+}
 
 int	ft_atoi(char *str)
 {
@@ -38,39 +57,6 @@ int	ft_atoi(char *str)
 	return (num);
 }
 
-int	add(int val1, int val2)
-{
-	return (val1 + val2);
-}
-
-int	subtract(int val1, int val2)
-{
-	return (val1 - val2);
-}
-
-int	divide(int val1, int val2)
-{
-	return (val1 / val2);
-}
-
-int	multiply(int val1, int val2)
-{
-	return (val1 * val2);
-}
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i])
-	{
-		if (s1[i] != s2[i])
-			break ;
-		i++;
-	}
-	return (s1[i] - s2[i]);
-}
 
 void	ft_putnbr(int nb)
 {
@@ -98,10 +84,6 @@ void	ft_putnbr(int nb)
 	}
 }
 
-int	modulo(int val1, int val2)
-{
-	return (val1 % val2);
-}
 
 void	ft_putstr(char *str)
 {
@@ -123,7 +105,7 @@ void	ft_do_op(int val1, char *op, int val2)
 	{
 		if (!val2)
 		{
-			ft_putstr("Stop: division by zero");
+			ft_putstr("Stop: division by zero\n");
 			return ;
 		}
 		ft_putnbr(operation[3](val1, val2));
@@ -132,17 +114,18 @@ void	ft_do_op(int val1, char *op, int val2)
 	{
 		if (!val2)
 		{
-			ft_putstr("Stop: modulo by zero");
+			ft_putstr("Stop: modulo by zero\n");
 			return ;
 		}
 		ft_putnbr(operation[4](val1, val2));
 	}
 	else
 		ft_putstr("0");
+	ft_putstr("\n");
 }
 
 int	main(int ac, char **av)
-{
+	{
 	if (ac != 4)
 		return (0);
 	ft_do_op(ft_atoi(av[1]), av[2], ft_atoi(av[3]));
