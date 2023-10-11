@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_str_cmp(char *s1, char *s2)
 {
 	int	i;
 
@@ -12,35 +12,33 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	}
 	return (s1[i] - s2[i]);
-} 
- 
-void	ft_sort_string_tab(char **tab)
-{
-	char	*temp;
-	int		i;
-	int		j;
-
-	i = -1;
-	j = -1;
-	while (tab[++i])
-		;
-	i++;
-	while (++j < --i)
-	{
-		if (ft_strcmp(tab[j], tab[i]))
-		{
-			temp = tab[i];
-			tab[i] = tab[j];
-			tab[j] = temp;
-		}
-	}
 }
 
-int	main(int ac, char **av)
+void	ft_sort_string_tab(char **tab)
 {
-	ft_sort_string_tab(av + 1);
-	av--;
-	while (*(++av))
-		printf("%s\n", *av);
-	return (0);
+	int		i;
+	int		j;
+	char	*temp;
+	int		tab_len;
+
+	i = 0;
+	j = 0;
+	tab_len = -1;
+	while (tab[++tab_len])
+		;
+	while (i < tab_len)
+	{
+		j = 0;
+		while (j < tab_len - 1)
+		{
+			if (ft_str_cmp(tab[j], tab[j + 1]) > 0)
+			{
+				temp = tab[j];
+				tab[j] = tab[j + 1];
+				tab[j + 1] = temp;
+			}
+			j++;
+		}
+		i++;
+	}
 }
