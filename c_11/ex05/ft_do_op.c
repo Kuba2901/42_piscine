@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:30:58 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 20:13:44 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:16:32 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(char *str)
 	return (num);
 }
 
-
+int	ft_do_op(int val1, char *op, int val2, int (*f)(int
 
 int	main(int ac, char **av)
 {
