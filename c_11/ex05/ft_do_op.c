@@ -6,31 +6,18 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:30:58 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 21:49:12 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 22:44:54 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	add(int val1, int val2);
-int	subtract(int val1, int val2);
-int	divide(int val1, int val2);
-int	multiply(int val1, int val2);
-int	modulo(int val1, int val2);
-
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i])
-	{
-		if (s1[i] != s2[i])
-			break ;
-		i++;
-	}
-	return (s1[i] - s2[i]);
-}
+int		add(int val1, int val2);
+int		subtract(int val1, int val2);
+int		divide(int val1, int val2);
+int		multiply(int val1, int val2);
+int		modulo(int val1, int val2);
+int		ft_strcmp(char *s1, char *s2);
+void	ft_putstr(char *str);
+void	ft_putnbr(int nb);
 
 int	ft_atoi(char *str)
 {
@@ -57,50 +44,33 @@ int	ft_atoi(char *str)
 	return (num);
 }
 
-
-void	ft_putnbr(int nb)
+void	assign_operations(int (*operation[5])(int, int))
 {
-	char	a;
-
-	if (nb == -2147483648)
-	{
-		write(1, "-2", 2);
-		ft_putnbr(147483648);
-	}
-	else if (nb < 0)
-	{
-		write(1, "-", 1);
-		ft_putnbr(-nb);
-	}
-	else if (nb <= 9)
-	{
-		a = nb + 48;
-		write(1, &a, 1);
-	}
-	else
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
+	operation[0] = &add;
+	operation[1] = &subtract;
+	operation[2] = &multiply;
+	operation[3] = &divide;
+	operation[4] = &modulo;
 }
 
-
-void	ft_putstr(char *str)
+void	handle_safe(int val1, char *op,
+		int val2, int (*operation[5])(int, int))
 {
-	str--;
-	while (*(++str))
-		write(1, str, 1);
-}
-
-void	ft_do_op(int val1, char *op, int val2)
-{
-	int (*operation[])(int, int) = {&add, &subtract, &multiply, &divide, &modulo};
 	if (!ft_strcmp(op, "+"))
 		ft_putnbr(operation[0](val1, val2));
 	else if (!ft_strcmp(op, "-"))
 		ft_putnbr(operation[1](val1, val2));
 	else if (!ft_strcmp(op, "*"))
 		ft_putnbr(operation[2](val1, val2));
+}
+
+void	ft_do_op(int val1, char *op, int val2)
+{
+	int	(*operation[5])(int, int);
+
+	assign_operations(operation);
+	if (!ft_strcmp(op, "+") || !ft_strcmp(op, "-") || !ft_strcmp(op, "*"))
+		handle_safe(val1, op, val2, operation);
 	else if (!ft_strcmp(op, "/"))
 	{
 		if (!val2)
@@ -121,13 +91,12 @@ void	ft_do_op(int val1, char *op, int val2)
 	}
 	else
 		ft_putstr("0");
-	ft_putstr("\n");
 }
 
 int	main(int ac, char **av)
-	{
+{
 	if (ac != 4)
-		return (0);
+		return (1);
 	ft_do_op(ft_atoi(av[1]), av[2], ft_atoi(av[3]));
 	return (0);
 }
