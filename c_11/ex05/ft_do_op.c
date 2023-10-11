@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:30:58 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 20:35:56 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 21:44:29 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,15 +103,22 @@ int	modulo(int val1, int val2)
 	return (val1 % val2);
 }
 
+void	ft_putstr(char *str)
+{
+	str--;
+	while (*(++str))
+		write(1, str, 1);
+}
+
 void	ft_do_op(int val1, char *op, int val2)
 {
-	void (*operation[])(int, int) = {&add, &subtract, &multiply, &divide, &modulo};
+	int (*operation[])(int, int) = {&add, &subtract, &multiply, &divide, &modulo};
 	if (!ft_strcmp(op, "+"))
 		ft_putnbr(operation[0](val1, val2));
 	else if (!ft_strcmp(op, "-"))
 		ft_putnbr(operation[1](val1, val2));
 	else if (!ft_strcmp(op, "*"))
-		return (operation[2](val1, val2));
+		ft_putnbr(operation[2](val1, val2));
 	else if (!ft_strcmp(op, "/"))
 	{
 		if (!val2)
@@ -119,7 +126,7 @@ void	ft_do_op(int val1, char *op, int val2)
 			ft_putstr("Stop: division by zero");
 			return ;
 		}
-		return (operation[3](val1, val2));
+		ft_putnbr(operation[3](val1, val2));
 	}
 	else if (!ft_strcmp(op, "%"))
 	{
@@ -128,15 +135,16 @@ void	ft_do_op(int val1, char *op, int val2)
 			ft_putstr("Stop: modulo by zero");
 			return ;
 		}
-		return (operation[4](val1, val2));
+		ft_putnbr(operation[4](val1, val2));
 	}
-	return (0);
+	else
+		ft_putstr("0");
 }
 
 int	main(int ac, char **av)
 {
-	if (ac != 2)
+	if (ac != 4)
 		return (0);
-	printf("%d\n", ft_do_op(av[1], av[2], av[3]));
+	ft_do_op(ft_atoi(av[1]), av[2], ft_atoi(av[3]));
 	return (0);
 }
