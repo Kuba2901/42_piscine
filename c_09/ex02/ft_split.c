@@ -6,12 +6,12 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:06:55 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 16:08:20 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 17:43:04 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int	is_sep(char *str, char *charset)
 {
@@ -24,7 +24,7 @@ int	is_sep(char *str, char *charset)
 	return (0);
 }
 
-int	count_words(char *str, char *charset, int str_len)
+int	count_words(char *str, char *charset)
 {
 	int		wc;
 	int		jumped;
@@ -93,17 +93,15 @@ int	handle_errors(char *str, char *charset, char ***split, int *string_index)
 		return (1);
 	}
 	*split = (char **)malloc(
-			(count_words(str, charset, str_len) + 1) * sizeof(char *));
+			(count_words(str, charset) + 1) * sizeof(char *));
 	*string_index = 0;
-	(*split)[count_words(str, charset, str_len)] = 0;
+	(*split)[count_words(str, charset)] = 0;
 	return (2);
 }
 
 char	**ft_split(char *str, char *charset)
 {
 	char	**split;
-	char	*start;
-	char	*jumped;
 	int		string_index;
 
 	if (handle_errors(str, charset, &split, &string_index) != 2)
@@ -119,4 +117,13 @@ char	**ft_split(char *str, char *charset)
 	}
 	split[string_index] = 0;
 	return (split);
+}
+
+int	main(void)
+{
+	char **arr = ft_split("hello world", " ");
+	int	i = -1;
+	while (arr[++i])
+		printf("%s\n", arr[i]);
+	return (0);
 }
