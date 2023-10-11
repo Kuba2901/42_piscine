@@ -8,19 +8,19 @@ OBJDIR = $(SRCDIR)
 TARGET = libft.a
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
-	@$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
 
 $(TARGET): $(addprefix $(OBJDIR)/, $(OBJ_FILES))
-	@ar rc $(TARGET) $(addprefix $(OBJDIR)/, $(OBJ_FILES))
-	@ranlib $(TARGET)
+	ar rc $(TARGET) $(addprefix $(OBJDIR)/, $(OBJ_FILES))
+	ranlib $(TARGET)
 
 all: $(TARGET)
 
 clean:
-	@rm -f $(addprefix $(OBJDIR)/, $(OBJ_FILES))
+	rm -f $(addprefix $(OBJDIR)/, $(OBJ_FILES))
 
 fclean: clean
-	@rm -f $(TARGET)
+	rm -f $(TARGET)
 
 re: fclean all
 
