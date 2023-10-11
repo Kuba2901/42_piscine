@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:35:02 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 17:53:26 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 18:06:27 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ int	ft_any(char **tab, int (*f)(char *))
 {
 	int	i;
 
+	if (!tab || !f)
+		return (0);
 	i = -1;
 	while (tab[++i])
 		if (f(tab[i]))
