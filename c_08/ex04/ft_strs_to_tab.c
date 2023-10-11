@@ -69,6 +69,6 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 		ret_strs[i] = create_struct(av[i]);
 		i++;
 	}
-	ret_strs[--i].str = 0;
+	ret_strs[i].str = 0;
 	return (ret_strs);
 }
