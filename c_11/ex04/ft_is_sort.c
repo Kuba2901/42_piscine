@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 18:07:09 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 23:31:48 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/12 00:45:47 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 	if (!tab || !length || !f)
 		return (0);
 	i = -1;
-	while (++i < length - 1)
+	while (++i < length)
 	{
 		if (f(tab[i], tab[i + 1]) > 0)
 			return (0);
