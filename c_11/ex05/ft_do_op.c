@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:30:58 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 20:16:32 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:19:44 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,26 @@ int	ft_atoi(char *str)
 	if (minus_count % 2 != 0)
 		return (-num);
 	return (num);
+}
+
+int	add(int val1, int val2)
+{
+	return (val1 + val2);
+}
+
+int	subtract(int val1, int val2)
+{
+	return (val1 - val2);
+}
+
+int	divide(int val1, int val2)
+{
+	return (val1 / val2);
+}
+
+int	multiply(int val1, int val2)
+{
+	return (val1 * val2);
 }
 
 int	ft_do_op(int val1, char *op, int val2, int (*f)(int
