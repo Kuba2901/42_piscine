@@ -6,7 +6,7 @@
 /*   By: jnenczak <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 19:30:58 by jnenczak          #+#    #+#             */
-/*   Updated: 2023/10/11 20:30:37 by jnenczak         ###   ########.fr       */
+/*   Updated: 2023/10/11 20:35:56 by jnenczak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,14 +98,20 @@ void	ft_putnbr(int nb)
 	}
 }
 
+int	modulo(int val1, int val2)
+{
+	return (val1 % val2);
+}
+
 void	ft_do_op(int val1, char *op, int val2)
 {
-	void (*operation[])(int, int) = {&add, &subtract, &multiply, &divide};
+	void (*operation[])(int, int) = {&add, &subtract, &multiply, &divide, &modulo};
 	if (!ft_strcmp(op, "+"))
 		ft_putnbr(operation[0](val1, val2));
 	else if (!ft_strcmp(op, "-"))
-		ft_putnbr(operation[0](val1, val2));	else if (!ft_strcmp(op, "*"))
-		return (operation[1](val1, val2));
+		ft_putnbr(operation[1](val1, val2));
+	else if (!ft_strcmp(op, "*"))
+		return (operation[2](val1, val2));
 	else if (!ft_strcmp(op, "/"))
 	{
 		if (!val2)
@@ -131,6 +137,6 @@ int	main(int ac, char **av)
 {
 	if (ac != 2)
 		return (0);
-	printf("%d\n", ft_atoi(av[1]));
+	printf("%d\n", ft_do_op(av[1], av[2], av[3]));
 	return (0);
 }
