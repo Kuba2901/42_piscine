@@ -23,28 +23,44 @@ int	comp(int a, int b)
 	return (0);
 }
 
-int	ft_is_sort(int *tab, int length, int (*f)(int, int))
+int	ft_is_sort_desc(int *tab, int length, int (*f)(int, int))
 {
 	int	i;
-	int	max;
 
 	if (!tab || !length || !f)
 		return (0);
 	i = -1;
-	max = tab[0];
 	while (++i < length - 1)
 	{
-		if (f(max, tab[i + 1]) > 0)
+		if (f(tab[i], tab[i + 1]) < 0)
 			return (0);
-		else
-			max = tab[i];
 	}
 	return (1);
 }
 
+int	ft_is_sort_asc(int *tab, int length, int (*f)(int, int))
+{
+	int	i;
+
+	if (!tab || !length || !f)
+		return (0);
+	i = -1;
+	while (++i < length - 1)
+	{
+		if (f(tab[i], tab[i + 1]) > 0)
+			return (0);
+	}
+	return (1);
+}
+
+int	ft_is_sort(int *tab, int length, int (*f)(int, int))
+{
+	return (ft_is_sort_asc(tab, length, f) + ft_is_sort_desc(tab, length, f));
+}
+
 int	main(void)
 {
-	int	tab[7] = {0,0,2,3,0,5,6};
-	printf("sorted: %d\n", ft_is_sort(tab, 7, &comp));
+	int	tab[7] = {4,3,2,0,0,0};
+	printf("sorted: %d\n", ft_is_sort(tab, 5, &comp));
 	return (0);
 }
