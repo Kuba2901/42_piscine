@@ -27,7 +27,7 @@ int	ft_is_sort_desc(int *tab, int length, int (*f)(int, int))
 {
 	int	i;
 
-	if (!tab || !length || !f)
+	if (!tab || !f)
 		return (0);
 	i = -1;
 	while (++i < length - 1)
@@ -42,7 +42,7 @@ int	ft_is_sort_asc(int *tab, int length, int (*f)(int, int))
 {
 	int	i;
 
-	if (!tab || !length || !f)
+	if (!tab || !f)
 		return (0);
 	i = -1;
 	while (++i < length - 1)
