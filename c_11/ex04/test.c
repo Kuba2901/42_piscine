@@ -10,15 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 int	comp(int a, int b)
 {
-	if (a < b)
-		return (-1);
-	if (a == b)
-		return (0);
-	if (a > b)
-		return (1);
-	return (0);
+	return (a - b);
 }
 
 int	ft_is_sort_desc(int *tab, int length, int (*f)(int, int))
