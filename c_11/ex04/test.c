@@ -60,7 +60,7 @@ int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 
 int	main(void)
 {
-	int	tab[7] = {4,3,2,0,0,0};
+	int	tab[7] = {4,2,2,0,0,0};
 	printf("sorted: %d\n", ft_is_sort(tab, 5, &comp));
 	return (0);
 }
