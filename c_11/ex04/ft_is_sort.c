@@ -10,48 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	comp(int a, int b)
-{
-	if (a < b)
-		return (-1);
-	if (a == b)
-		return (0);
-	if (a > b)
-		return (1);
-	return (0);
-}
-
-int	ft_is_sort_desc(int *tab, int length, int (*f)(int, int))
-{
-	int	i;
-
-	if (!tab || !f)
-		return (0);
-	i = -1;
-	while (++i < length - 1)
-	{
-		if ((*f)(tab[i], tab[i + 1]) < 0)
-			return (0);
-	}
-	return (1);
-}
-
-int	ft_is_sort_asc(int *tab, int length, int (*f)(int, int))
-{
-	int	i;
-
-	if (!tab || !f)
-		return (0);
-	i = -1;
-	while (++i < length - 1)
-	{
-		if ((*f)(tab[i], tab[i + 1]) > 0)
-			return (0);
-	}
-	return (1);
-}
-
 int	ft_is_sort(int *tab, int length, int (*f)(int, int))
 {
-	return (ft_is_sort_asc(tab, length, f) || ft_is_sort_desc(tab, length, f));
+	int	i;
+	int	sort;
+
+	sort = 1;
+	i = -1;
+	while (++i < length - 1 && sort)
+		if ((*f)(tab[i], tab[i + 1]) < 0)
+			sort = 0;
+	if (!sort)
+	{
+		sort = 1;
+		i = -1;
+		while (++i < length - 1)
+			if ((*f)(tab[i], tab[i + 1]) > 0)
+				return (0);
+	}
+	return (1);
 }
