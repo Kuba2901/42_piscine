@@ -1,7 +1,10 @@
-all: ft_display_file.c
-	@cc -o ft_display_file ft_display_file.c
+CC = cc
+CFLAGS = -Wall -Werror
 
-ft_display_file: all
+all: ft_display_file
+
+ft_display_file: ft_display_file.c
+	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
 	@rm -f ft_display_file
@@ -9,3 +12,5 @@ clean:
 fclean: clean
 
 re: fclean all
+
+.PHONY: all clean fclean re
