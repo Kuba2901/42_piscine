@@ -17,9 +17,6 @@ void display_file(char *file_name) {
 
 	file = open(file_name, O_RDONLY);
 	if (file == -1) {
-		// char *base_name = basename(file_name);
-		// ft_putstr(base_name);
-		// ft_putstr(": ");
 		ft_putstr("ft_cat: ");
 		ft_putstr(file_name);
 		ft_putstr(": ");
@@ -37,7 +34,7 @@ void display_files(int ac, char **av) {
 
 	i = 0;
 	while (++i < ac)
-		display_file(av[i]);
+		display_file(av[i]); 
 }
 
 int main(int ac, char **av) {
