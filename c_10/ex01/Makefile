@@ -1,7 +1,10 @@
-all: ft_cat.c
-	@cc -Wall -Wextra -Werror -o ft_cat ft_cat.c
+CC = cc
+CFLAGS = -Wall -Werror
 
-ft_cat: all
+all: ft_cat
+
+ft_cat: ft_cat.c
+	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
 	@rm -f ft_cat
@@ -9,3 +12,5 @@ clean:
 fclean: clean
 
 re: fclean all
+
+.PHONY: all clean fclean re

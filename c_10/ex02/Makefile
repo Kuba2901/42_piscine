@@ -1,7 +1,10 @@
-all: ft_tail.c ft_tail_2.c
-	@cc -Wall -Wextra -Werror -o ft_tail ft_tail.c ft_tail_2.c
+CC = cc
+CFLAGS = -Wall -Werror
 
-ft_tail: all
+all: ft_tail
+
+ft_tail: ft_tail.c ft_tail_2.c
+	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
 	@rm -f ft_tail
@@ -9,3 +12,5 @@ clean:
 fclean: clean
 
 re: fclean all
+
+.PHONY: all clean fclean re
